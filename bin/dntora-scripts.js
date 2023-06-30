@@ -5,7 +5,7 @@ process.on('unhandledRejection', err => {
     throw err;
 });
 
-const exec = require('../lib/naor-scripts');
+const exec = require('../lib/dntora-scripts');
 const args = process.argv.slice(2);
 const scriptIndex = args.findIndex(
     name => name === 'build' || name === 'test'
