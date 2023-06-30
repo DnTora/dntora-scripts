@@ -11,9 +11,8 @@ const scriptIndex = args.findIndex(
     name => name === 'build' || name === 'test'
 );
 const script = scriptIndex === -1 ? null : args[scriptIndex];
-console.log(process.cwd())
 if (['build'].includes(script)) {
-    exec(process.cwd(), script, args[1]);
+    exec(script, args[1]);
 } else {
     console.log('Unknown script "' + script + '".');
     console.log('Perhaps you need to update naor-scripts?');
